@@ -1,6 +1,9 @@
 ## Data Source
-Data is sourced from: https://www.kaggle.com/NUFORC/ufo-sightings.
+Data is sourced from [here](https://www.kaggle.com/NUFORC/ufo-sightings).
 The scripts used to preprocess the sources' scrubbed.csv and completed.csv are in src/data/DataPreprocessingTools.py.
+
+## Tools
+Used [ReactMapGL](https://visgl.github.io/react-map-gl/) react wrapper for [MapBox API](https://www.mapbox.com/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
