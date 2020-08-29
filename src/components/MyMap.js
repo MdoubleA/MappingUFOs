@@ -6,8 +6,8 @@ class MyMap extends Component {
 		viewport: {
 			latitude: 42.5929,
 			longitude: -46.5044,
-			width: "100vw",
-			height: "100vh",
+			width: "100%",
+			height: "100%",
 			zoom: 2
 		},
 		selectedPost: null
@@ -15,7 +15,7 @@ class MyMap extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="Main-map-container">
 				<ReactMapGL
 					{...this.state.viewport}
 					mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
