@@ -1,3 +1,7 @@
+## Data Source
+Data is sourced from: https://www.kaggle.com/NUFORC/ufo-sightings.
+The scripts used to preprocess the sources' scrubbed.csv and completed.csv are in src/data/DataPreprocessingTools.py.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

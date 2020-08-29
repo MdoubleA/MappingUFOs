@@ -6,11 +6,9 @@ from random import shuffle
 
 
 #  Assumes a header.
-def csv_to_json(csv_path, json_path, json_file):
-	Path(json_path).mkdir(parents=True, exist_ok=True)
-
+def csv_to_json(csv_path, json_file):
 	with open(csv_path, 'r') as csv_handle:
-		with open(json_path + json_file, 'w') as json_handle:
+		with open(json_file, 'w') as json_handle:
 			complete_csv = csv.reader(csv_handle, delimiter=',')
 			complete_csv = [row for row in complete_csv]
 			header_csv = complete_csv[0]
@@ -69,8 +67,7 @@ def reduce_data_size(src_file, dst_file, reduction_amount):
 		with open(dst_file, 'w') as dst_file_handle:
 			json.dump({'count': new_size, 'posts': new_data}, dst_file_handle)
 
-head = "C:\\Users\\Michael\\ProgrammingProjects\\UFO-SightingsToMaps\\ufos-sights-to-maps\\src\\data\\"
 reduction_amount = 80100
-#csv_to_json(head+"scrubbed.csv", head, "RawJson.json")
-#add_id_slug_to_json(head+"RawJson.json", head+"AllData.json")
-reduce_data_size(head+"AllData.json", head+"ReducedData.json", reduction_amount)
+csv_to_json("scrubbed.csv", "RawJson.json")
+add_id_slug_to_json("RawJson.json", "AllData.json")
+reduce_data_size("AllData.json", "ReducedData.json", reduction_amount)
