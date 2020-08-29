@@ -1,5 +1,5 @@
 ## Data Source
-Data is sourced from [here](https://www.kaggle.com/NUFORC/ufo-sightings).
+Data is sourced from [Kaggle](https://www.kaggle.com/NUFORC/ufo-sightings).
 The scripts used to preprocess the sources' scrubbed.csv and completed.csv are in src/data/DataPreprocessingTools.py.
 
 ## Tools
