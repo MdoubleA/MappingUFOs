@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import PostForm from "./components/PostForm";
 import Messages from "./components/Message";
 import MyMap from "./components/MyMap";
+import * as SightingData from "./data/ReducedData.json"
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -17,53 +18,7 @@ import {
 class App extends Component {
 	state = {
 		message: null,
-		posts: [
-			 {
-			   id: 0,
-			   slug: "sighting-0",
-			   datetime : "10/10/1949 20:30",
-			   city : "san marcos",
-			   state : "tx",
-			   country : "us",
-			   shape : "cylinder",
-			   durationinseconds : 2700,
-			   duration : "45 minutes",
-			   comments : "This event took place in early fall around 1949-50. It occurred after a Boy Scout meeting in the Baptist Church. The Baptist Church sit",
-			   dateposted : "4/27/2004",
-			   latitude : 29.8830556,
-			   longitude : -97.9411111
-			},
-			 {
-			   id: 1,
-			   slug: "sighting-1",
-			   datetime : "10/10/1949 21:00",
-			   city : "lackland afb",
-			   state : "tx",
-			   country : "",
-			   shape : "light",
-			   durationinseconds : 7200,
-			   duration : "1-2 hrs",
-			   comments : "1949 Lackland AFB&#44 TX.  Lights racing across the sky &amp; making 90 degree turns on a dime.",
-			   dateposted : "12/16/2005",
-			   latitude : 29.38421,
-			   longitude : -98.581082
-			},
-			 {
-			   id: 2,
-			   slug: "sighting-2",
-			   datetime : "10/10/1955 17:00",
-			   city : "chester (uk/england)",
-			   state : "",
-			   country : "gb",
-			   shape : "circle",
-			   durationinseconds : 20,
-			   duration : "20 seconds",
-			   comments : "Green/Orange circular disc over Chester&#44 England",
-			   dateposted : "1/21/2008",
-			   latitude : 53.2,
-			   longitude : -2.916667
-			}
-		]  // end posts
+		posts: SightingData.posts
 	};  // end state
 
 	createBlankPost = () => {

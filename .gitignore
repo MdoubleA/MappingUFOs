@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Unneeded intermediate datasets used in preprocessing the data for web use.
+/src/data/AllData.json
+/src/data/RawJson.json
+/src/data/scrubbed.csv

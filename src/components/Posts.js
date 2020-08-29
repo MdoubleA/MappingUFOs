@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Posts = ({posts}) => {
 	return (
 		<article className="posts-container">
-			<h1>Posts</h1>
-			<ul>
+			<h1>Alien Sightings</h1>
+			<ol>
 				{posts.length < 1 && (
 					<li key="empty">There are no sightings yet.</li>
 				)}
@@ -15,7 +15,7 @@ const Posts = ({posts}) => {
 							<Link to={"/post/" + post.slug}>{post.city} {post.datetime}</Link>
 						</li>
 				))}
-			</ul>
+			</ol>
 		</article>
 	);
 };
